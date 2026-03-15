@@ -155,6 +155,13 @@ model = load_model("waste_classifier_v2.keras")
 This ensures reproducibility and easy deployment.
 
 
+## Model File
+
+The trained .keras model file is not included in this repository due to file size limitations.
+
+However, the complete training pipeline, preprocessing steps, and model architecture are provided in the notebook, allowing the model to be reproduced.
+
+
 **Inference (Prediction on a Single Image)**
 
 The system supports prediction on individual images not seen during training.
