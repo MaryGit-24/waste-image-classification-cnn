@@ -9,7 +9,7 @@ The goal of the model is to classify uploaded images into predefined waste categ
 This repository contains the machine learning model, training pipeline, evaluation logic, and inference workflow used in the EcoReward system.
 
 
-**Problem Statement**
+## **Problem Statement**
 
 Manual waste classification is time-consuming, inconsistent, and not scalable.
 EcoReward solves this by using computer vision and deep learning to:
@@ -23,7 +23,7 @@ EcoReward solves this by using computer vision and deep learning to:
 4.  Support environmental sustainability initiatives
 
 
-**Waste Categories (Classes)**
+## **Waste Categories (Classes)**
 
 The model currently classifies images into four waste categories:
 
@@ -38,7 +38,7 @@ The model currently classifies images into four waste categories:
 **Note:** The model is trained to recognize material type, not whether the object looks dirty or discarded. Clean containers are valid training samples as long as the material is correct.
 
 
-**Dataset Structure**
+## **Dataset Structure**
 
 The dataset is organized using a directory-based structure compatible with Keras ImageDataGenerator.
 
@@ -46,10 +46,15 @@ dataset/
 │
 
 ├── train/
+
 │   ├── glass/
+
 │   ├── metal/
+
 │   ├── paper/
+
 │   └── plastic/
+
 │
 
 └── validation/
