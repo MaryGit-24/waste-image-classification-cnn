@@ -1,7 +1,7 @@
-**EcoReward – Waste Classification Model**
+# **EcoReward – Waste Classification Model**
 
 
-**Project Overview**
+## **Project Overview**
 
 EcoReward is an AI-powered waste classification system designed to automatically identify waste types from images and support a reward-based recycling platform.
 The goal of the model is to classify uploaded images into predefined waste categories and provide a confidence score that determines whether a submission is approved, requires admin review, or is rejected.
