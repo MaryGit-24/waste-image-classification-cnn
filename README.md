@@ -47,25 +47,25 @@ dataset/
 
 ├── train/
 
-│   ├── glass/
+│   ├── glass/ - 80
 
-│   ├── metal/
+│   ├── metal/ - 80
 
-│   ├── paper/
+│   ├── paper/ - 80
 
-│   └── plastic/
+│   └── plastic/ - 80
 
 │
 
 ├── validation/
 
-│   ├── glass/
+│   ├── glass/ - 20
 
-│   ├── metal/
+│   ├── metal/ - 20
 
-│   ├── paper/
+│   ├── paper/ - 20
 
-│   └── plastic/
+│   └── plastic/ - 20
     
 
 ## **Dataset Size**
