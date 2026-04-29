@@ -46,6 +46,7 @@ dataset/
 │
 
 ├── train/
+
 │   ├── glass/
 
 │   ├── metal/
@@ -57,6 +58,7 @@ dataset/
 │
 
 ├── validation/
+
 │   ├── glass/
 
 │   ├── metal/
@@ -66,7 +68,7 @@ dataset/
 │   └── plastic/
     
 
-**Dataset Size**
+## **Dataset Size**
 
 Training images: ~80 images per class
 
