@@ -81,39 +81,39 @@ Validation images: ~20 images per class
 
 To improve generalization and reduce overfitting, the following preprocessing steps are applied:
 
-    1.  Image resizing to 224 × 224
+      1.  Image resizing to 224 × 224
 
-    2.  Pixel normalization (rescale = 1/255)
+      2.  Pixel normalization (rescale = 1/255)
 
-3.  Data augmentation on training data:
+      3.  Data augmentation on training data:
 
-  *  Random rotation
+        *  Random rotation
 
-  *  Horizontal flipping
+        *  Horizontal flipping
 
-  *  Zoom variations
+        *  Zoom variations
 
-  *  Width and height shifts
+        *  Width and height shifts
 
-Validation data is not augmented to ensure unbiased performance evaluation.
+**Validation data is not augmented to ensure unbiased performance evaluation.**
 
 
-**Model Architecture**
+## **Model Architecture**
 
 The project uses a Convolutional Neural Network (CNN) built with TensorFlow and Keras.
 
 High-level architecture:
 
-  *  Convolutional layers for feature extraction
+     *  Convolutional layers for feature extraction
 
-  *  MaxPooling layers for spatial reduction
+     *  MaxPooling layers for spatial reduction
 
-  *  Fully connected (Dense) layers for classification
+     *  Fully connected (Dense) layers for classification
 
-  *  Softmax activation in the output layer for multi-class probability prediction
+     *  Softmax activation in the output layer for multi-class probability prediction
 
 
-**Model Training**
+## **Model Training**
 
   *  Framework: TensorFlow / Keras
 
@@ -126,7 +126,7 @@ High-level architecture:
   *  Epochs: 10
 
 
-**During training:**
+## **During training:**
 
 1.  Training accuracy reached near-perfect levels
 
@@ -135,7 +135,7 @@ High-level architecture:
 This behavior is expected with limited data and confirms that the model learned meaningful features without memorizing validation samples.
 
 
-**Model Evaluation**
+## **Model Evaluation**
 
 The model is evaluated using the validation dataset:
 
@@ -143,14 +143,14 @@ model.evaluate(val_generator)
 
 Evaluation outputs:
 
-Validation loss = 0.5984
+      Validation loss = 0.5984
 
-Validation accuracy = 0.8102
+      Validation accuracy = 0.8102
 
 These metrics help assess how well the model generalizes to unseen data.
 
 
-**Model Saving & Loading**
+## **Model Saving & Loading**
 
 The trained model is saved using the native Keras format:
 
@@ -158,8 +158,8 @@ model.save("waste_classifier_v2.keras")
 
 The saved model can be reloaded later without retraining:
 
-from tensorflow.keras.models import load_model
-model = load_model("waste_classifier_v2.keras")
+      from tensorflow.keras.models import load_model
+      model = load_model("waste_classifier_v2.keras")
 
 This ensures reproducibility and easy deployment.
 
@@ -171,84 +171,84 @@ The trained .keras model file is not included in this repository due to file siz
 However, the complete training pipeline, preprocessing steps, and model architecture are provided in the notebook, allowing the model to be reproduced.
 
 
-**Inference (Prediction on a Single Image)**
+## **Inference (Prediction on a Single Image)**
 
 The system supports prediction on individual images not seen during training.
 
 Inference steps:
 
-1.  Load and preprocess the image
+      1.  Load and preprocess the image
 
-2.  Run the model prediction
+      2.  Run the model prediction
 
-3.  Extract the predicted class
+      3.  Extract the predicted class
 
-4.  Output the confidence score
+      4.  Output the confidence score
 
 
 **Example:**
 
-Glass image → Confidence: 0.93
+      Glass image → Confidence: 0.93
 
-Metal image → Confidence: 0.99
+      Metal image → Confidence: 0.99
 
-Paper image → Confidence: 0.99
+      Paper image → Confidence: 0.99
 
-Plastic image → Confidence: 0.99
+      Plastic image → Confidence: 0.99
 
-These results confirm correct classification on unseen data.
+**These results confirm correct classification on unseen data.**
 
 
-**Confidence Threshold Logic (Reward System)**
+## **Confidence Threshold Logic (Reward System)**
 
 The EcoReward platform uses confidence scores to determine reward eligibility.
 
-Confidence Score	      Decision
+      Confidence Score	      Decision
 
-≥70%	                  Automatically approved
+      ≥70%	                  Automatically approved
 
-40% – 69%	              Requires admin review
+      40% – 69%	            Requires admin review
 
-<40%	                  Rejected
+      <40%	                  Rejected
 
 This logic ensures fairness, prevents abuse, and maintains system reliability.
 
 
-**Project Workflow Summary**
+## **Project Workflow Summary**
 
-  *  Dataset preparation and structuring
+     *  Dataset preparation and structuring
 
-  *  Image preprocessing and augmentation
+     *  Image preprocessing and augmentation
 
-  *  Model training
+     *  Model training
 
-  *  Training vs validation accuracy analysis
+     *  Training vs validation accuracy analysis
 
-  *  Model saving
+     *  Model saving
 
-  *  Inference testing on unseen images
+     *  Inference testing on unseen images
 
-  *  Confidence-based decision logic
+     *  Confidence-based decision logic
 
-  *  Integration with EcoReward platform
-
-
-**Technologies Used**
-
-  *  Python
-
-  *  TensorFlow
-
-  *  Keras
-
-  *  NumPy
-
-  *  Matplotlib
-
-  *  Google Colab
+     *  Integration with EcoReward platform
 
 
-**Team Collaboration Notes**
+## **Technologies Used**
+
+     *  Python
+
+     *  TensorFlow
+
+     *  Keras
+
+     *  NumPy
+
+     *  Matplotlib
+
+     *  Google Colab
+
+
+## **Team Collaboration Notes**
 
   *  This is a group project
 
@@ -259,7 +259,7 @@ This logic ensures fairness, prevents abuse, and maintains system reliability.
   *  Notebook includes clear comments for maintainability
 
 
-**Future Improvements**
+## **Future Improvements**
 
   *  Increase dataset size for better generalization
 
@@ -272,7 +272,7 @@ This logic ensures fairness, prevents abuse, and maintains system reliability.
   *  Deploy model as an API endpoint
 
 
-**Conclusion**
+## **Conclusion**
 
 This project demonstrates a complete end-to-end machine learning pipeline, from data preparation to deployment-ready inference.
 The model performs reliably on unseen data and is structured for easy extension and real-world integration.
