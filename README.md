@@ -77,13 +77,13 @@ Validation images: ~20 images per class
 **Total classes: 4**
 
 
-**Data Preprocessing & Augmentation**
+## **Data Preprocessing & Augmentation**
 
 To improve generalization and reduce overfitting, the following preprocessing steps are applied:
 
-1.  Image resizing to 224 × 224
+    1.  Image resizing to 224 × 224
 
-2.  Pixel normalization (rescale = 1/255)
+    2.  Pixel normalization (rescale = 1/255)
 
 3.  Data augmentation on training data:
 
