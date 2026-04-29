@@ -27,13 +27,13 @@ EcoReward solves this by using computer vision and deep learning to:
 
 The model currently classifies images into four waste categories:
 
-*  Glass
+    *  Glass
 
-*  Metal
+    *  Metal
 
-*  Paper
+    *  Paper
 
-*  Plastic
+    *  Plastic
 
 **Note:** The model is trained to recognize material type, not whether the object looks dirty or discarded. Clean containers are valid training samples as long as the material is correct.
 
@@ -42,30 +42,30 @@ The model currently classifies images into four waste categories:
 
 The dataset is organized using a directory-based structure compatible with Keras ImageDataGenerator.
 
-dataset/
-│
+    dataset/
+    │
 
-├── train/
+    ├── train/
 
-│   ├── glass/ - 80
+    │   ├── glass/ - 80
 
-│   ├── metal/ - 80
+    │   ├── metal/ - 80
 
-│   ├── paper/ - 80
+    │   ├── paper/ - 80
 
-│   └── plastic/ - 80
+    │   └── plastic/ - 80
 
-│
+    │
 
-├── validation/
+    ├── validation/
 
-│   ├── glass/ - 20
+    │   ├── glass/ - 20
 
-│   ├── metal/ - 20
+    │   ├── metal/ - 20
 
-│   ├── paper/ - 20
+    │   ├── paper/ - 20
 
-│   └── plastic/ - 20
+    │   └── plastic/ - 20
     
 
 ## **Dataset Size**
